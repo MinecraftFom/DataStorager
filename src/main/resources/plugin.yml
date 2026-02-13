@@ -1,0 +1,8 @@
+name: DataStorager
+version: '0.0.3'
+main: com.fomdev.dbs.init.DataStorager
+api-version: '1.21'
+prefix: DBS
+load: STARTUP
+authors: [ Fomdev ]
+description: A library for saving data into the server folder
