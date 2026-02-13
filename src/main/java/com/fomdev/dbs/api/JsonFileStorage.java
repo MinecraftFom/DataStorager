@@ -49,7 +49,7 @@ public class JsonFileStorage {
     }
 
     /**
-     * Just simpfies the step of initializing a new {@link NamespacedKey},
+     * Just simplifies the step of initializing a new {@link NamespacedKey},
      * nothing more than {@link JsonFileStorage#JsonFileStorage(NamespacedKey)}
      *
      * @see JsonFileStorage
