@@ -64,6 +64,13 @@ public class JsonFileCache {
     }
 
     /**
+     * Gets the map data from parent
+     *
+     * @return The stored data
+     */
+    public Map<String, Object> get() { return storage.get(); }
+
+    /**
      * Removes the object by the given key in the buffer
      *
      * @param key The key to remvoe

@@ -62,6 +62,13 @@ public class YamlFileCache {
     }
 
     /**
+     * Gets data from parent
+     *
+     * @return The data from parent
+     */
+    public Map<String, Object> get() { return storage.get(); }
+
+    /**
      * Removes data from cache
      *
      * @param key The key of the data
