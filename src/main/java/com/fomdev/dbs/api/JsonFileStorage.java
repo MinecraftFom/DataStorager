@@ -61,6 +61,18 @@ public class JsonFileStorage {
     }
 
     /**
+     * Directly loads the config from a file
+     *
+     * @param file The file to load
+     * @since 1.0.2
+     */
+    public JsonFileStorage(File file) {
+        this.gson = new GsonBuilder().setPrettyPrinting().create();
+        this.path = file.getPath();
+        this.file = file;
+    }
+
+    /**
      * Will reformat the json file and append a completely new Map
      * object into it.
      *

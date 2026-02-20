@@ -44,6 +44,17 @@ public class YamlFileStorage {
     }
 
     /**
+     * Directly loads config from file
+     *
+     * @param file The file to load
+     * @since 1.0.2
+     */
+    public YamlFileStorage(File file) {
+        this.path = file.getPath();
+        this.file = file;
+    }
+
+    /**
      * Appends data to the yaml fire (directly)
      *
      * @param key The key or path of the yaml file

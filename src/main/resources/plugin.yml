@@ -1,5 +1,5 @@
 name: DataStorager
-version: '0.0.3'
+version: '1.0.2'
 main: com.fomdev.dbs.init.DataStorager
 api-version: '1.21'
 prefix: DBS

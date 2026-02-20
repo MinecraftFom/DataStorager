@@ -2,6 +2,7 @@ package com.fomdev.dbs.api;
 
 import org.bukkit.NamespacedKey;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,6 +40,19 @@ public class JsonFileCache {
      */
     public JsonFileCache(String path, String file) {
         this(new NamespacedKey(path, file));
+    }
+
+    /**
+     * Directly loads config from file
+     *
+     * @see JsonFileStorage#JsonFileStorage(File)
+     * @param file The file to load
+     * @since 1.0.2
+     */
+    public JsonFileCache(File file) {
+        storage = new JsonFileStorage(file);
+        buffer  = storage.get();
+        if (buffer == null) buffer = new HashMap<>();
     }
 
     /**

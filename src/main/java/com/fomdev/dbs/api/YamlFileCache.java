@@ -2,6 +2,7 @@ package com.fomdev.dbs.api;
 
 import org.bukkit.NamespacedKey;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -37,6 +38,18 @@ public class YamlFileCache {
      */
     public YamlFileCache(String path, String file) {
         this(new NamespacedKey(path, file));
+    }
+
+    /**
+     * Directly loads config from file
+     *
+     * @see YamlFileStorage#YamlFileStorage(File)
+     * @param file The file to load
+     * @since 1.0.2
+     */
+    public YamlFileCache(File file) {
+        this.storage = new YamlFileStorage(file);
+        this.data    = storage.get();
     }
 
     /**
